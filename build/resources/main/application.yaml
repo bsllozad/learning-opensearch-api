@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /customer-lookup/api
+
+aws:
+  os:
+    region: ${AWS_REGION}
+    endpoint: ${AWS_OPEN_SEARCH_ENDPOINT}
+  iam:
+    accessKey: ${AWS_ACCESS_KEY_ID}
+    secretKey: ${AWS_SECRET_ACCESS_KEY}

@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '3.3.5'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+ext {
+    lombokVersion = '1.18.30'
+    junitJupiterVersion = '5.8.1'
+    awsSdkVersion = '2.26.20'
+    opensearchVersion = '2.18.0'
+    springDataOpensearchVersion = '1.6.0'
+    snakeYamlVersion = '2.3'
+    gsonVersion = '2.11.0'
+}
+
+group 'co.blopez.learning'
+version '1.0.0'
+sourceCompatibility = '21'
+
+
+apply from: 'gradle/projectConfig.gradle'
+apply from: 'gradle/dependencies.gradle'
+
+
+test {
+    useJUnitPlatform()
+}
